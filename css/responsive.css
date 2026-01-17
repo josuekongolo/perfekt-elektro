@@ -1,0 +1,629 @@
+/* ============================================
+   Perfekt Elektro AS - Responsive Styles
+   Mobile-First Approach
+   ============================================ */
+
+/* ============================================
+   Large Desktop (1200px+)
+   ============================================ */
+@media (min-width: 1200px) {
+    :root {
+        --fs-h1: 3rem;
+        --fs-h2: 2.25rem;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+}
+
+/* ============================================
+   Desktop (1024px - 1199px)
+   ============================================ */
+@media (max-width: 1199px) {
+    .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: var(--space-xl);
+    }
+
+    .process-grid {
+        gap: var(--space-lg);
+    }
+}
+
+/* ============================================
+   Tablet (768px - 1023px)
+   ============================================ */
+@media (max-width: 1023px) {
+    :root {
+        --fs-h1: 2.25rem;
+        --fs-h2: 1.75rem;
+        --fs-h3: 1.25rem;
+        --space-4xl: 4rem;
+    }
+
+    /* Header */
+    .top-bar {
+        display: none;
+    }
+
+    .header {
+        box-shadow: var(--shadow-md);
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--color-accent);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: var(--space-2xl);
+        gap: var(--space-lg);
+        transform: translateX(100%);
+        transition: transform var(--transition-base);
+        overflow-y: auto;
+    }
+
+    .nav-menu.active {
+        transform: translateX(0);
+    }
+
+    .nav-menu a {
+        font-size: 1.125rem;
+    }
+
+    .nav-cta {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    /* Mobile menu animation */
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    /* Hero */
+    .hero {
+        margin-top: var(--header-height);
+        min-height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+
+    /* Intro */
+    .intro-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .intro-image {
+        order: -1;
+    }
+
+    .image-placeholder {
+        min-height: 300px;
+    }
+
+    /* Service Area */
+    .area-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .map-placeholder {
+        min-height: 300px;
+    }
+
+    /* Trust */
+    .trust-badges {
+        gap: var(--space-xl);
+    }
+
+    .badge-number {
+        font-size: 2rem;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-xl);
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+    }
+
+    /* Service Detail */
+    .service-detail-content {
+        grid-template-columns: 1fr;
+    }
+
+    .service-detail-content.reverse {
+        direction: ltr;
+    }
+
+    .service-detail-image {
+        position: static;
+        order: -1;
+    }
+
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    /* About */
+    .about-intro {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .founder-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .founder-image {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    /* EV Charging */
+    .borettslag-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-step::after {
+        display: none;
+    }
+}
+
+/* ============================================
+   Mobile (480px - 767px)
+   ============================================ */
+@media (max-width: 767px) {
+    :root {
+        --fs-h1: 2rem;
+        --fs-h2: 1.5rem;
+        --fs-h3: 1.125rem;
+        --space-3xl: 2.5rem;
+        --space-4xl: 3rem;
+        --container-padding: 1rem;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 60vh;
+        padding: var(--space-2xl) 0;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+        line-height: 1.2;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .hero-badges {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    .badge {
+        justify-content: center;
+    }
+
+    /* Buttons */
+    .btn-lg {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Services Grid */
+    .services-grid {
+        gap: var(--space-md);
+    }
+
+    .service-card {
+        padding: var(--space-md);
+    }
+
+    .service-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .service-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .service-card h3 {
+        font-size: 1rem;
+    }
+
+    /* Features */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .feature {
+        padding: var(--space-md);
+    }
+
+    /* Popular Services */
+    .popular-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .popular-card {
+        padding: var(--space-md);
+    }
+
+    /* Area */
+    .area-list {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    /* Trust */
+    .trust-badges {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+
+    /* CTA */
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Forms */
+    .form-group {
+        margin-bottom: var(--space-md);
+    }
+
+    /* Contact */
+    .contact-form-section {
+        padding: var(--space-lg);
+    }
+
+    /* Values */
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Certifications */
+    .certifications-list {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cert-item {
+        justify-content: center;
+    }
+
+    /* EV Charging */
+    .why-ev-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+
+    .why-ev-item {
+        padding: var(--space-md);
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .process-number {
+        width: 60px;
+        height: 60px;
+        font-size: 1.25rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Pricing */
+    .pricing-list li {
+        flex-direction: column;
+        gap: var(--space-xs);
+    }
+}
+
+/* ============================================
+   Small Mobile (320px - 479px)
+   ============================================ */
+@media (max-width: 479px) {
+    :root {
+        --fs-h1: 1.75rem;
+        --fs-h2: 1.375rem;
+        --fs-h3: 1.125rem;
+        --fs-body: 0.9375rem;
+    }
+
+    /* Logo */
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    /* Hero */
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Section Headers */
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Image Placeholders */
+    .image-placeholder,
+    .map-placeholder {
+        min-height: 200px;
+        padding: var(--space-2xl);
+    }
+
+    .image-placeholder svg,
+    .map-placeholder svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Founder */
+    .founder-image {
+        padding: var(--space-2xl);
+    }
+
+    .founder-image svg {
+        width: 80px;
+        height: 80px;
+    }
+
+    .founder-quote {
+        padding: var(--space-md);
+        font-size: 1rem;
+    }
+
+    /* EV */
+    .why-ev-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Buttons in hero */
+    .btn {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.9375rem;
+    }
+}
+
+/* ============================================
+   Touch Device Optimizations
+   ============================================ */
+@media (hover: none) and (pointer: coarse) {
+    /* Remove hover effects on touch devices */
+    .service-card:hover,
+    .feature:hover,
+    .popular-card:hover,
+    .value-card:hover,
+    .product-card:hover {
+        transform: none;
+    }
+
+    /* Make touch targets larger */
+    .nav-menu a {
+        padding: var(--space-md) 0;
+    }
+
+    .footer-links ul a {
+        padding: var(--space-sm) 0;
+        display: block;
+    }
+
+    /* Show arrows always on popular cards */
+    .popular-arrow {
+        opacity: 1;
+    }
+
+    /* Increase button size */
+    .btn {
+        min-height: 48px;
+    }
+
+    /* Larger form inputs */
+    .form-input,
+    .form-textarea,
+    .form-select {
+        min-height: 48px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    .form-checkbox input {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* ============================================
+   High Contrast / Accessibility
+   ============================================ */
+@media (prefers-contrast: high) {
+    :root {
+        --color-border: #666666;
+        --color-text-light: #444444;
+        --color-text-muted: #555555;
+    }
+
+    .btn {
+        border-width: 3px;
+    }
+
+    a:focus,
+    button:focus,
+    input:focus,
+    textarea:focus,
+    select:focus {
+        outline: 3px solid var(--color-primary);
+        outline-offset: 2px;
+    }
+}
+
+/* ============================================
+   Reduced Motion
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .btn:hover,
+    .service-card:hover,
+    .feature:hover,
+    .popular-card:hover,
+    .value-card:hover,
+    .product-card:hover {
+        transform: none;
+    }
+}
+
+/* ============================================
+   Dark Mode (Future Enhancement)
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+    /* Placeholder for future dark mode support
+       Currently keeping light theme for brand consistency */
+}
+
+/* ============================================
+   Landscape Mobile
+   ============================================ */
+@media (max-width: 767px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding: var(--space-xl) 0;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+    }
+
+    .hero-badges {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/* ============================================
+   Print Responsive
+   ============================================ */
+@media print {
+    .section {
+        padding: 1rem 0;
+        page-break-inside: avoid;
+    }
+
+    .services-grid,
+    .features-grid,
+    .popular-grid,
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-background {
+        background: var(--color-light) !important;
+    }
+
+    .hero-content {
+        color: var(--color-dark);
+    }
+
+    .hero h1 {
+        color: var(--color-dark);
+    }
+}
+
+/* ============================================
+   Container Queries (Future Enhancement)
+   ============================================ */
+@supports (container-type: inline-size) {
+    .services-grid {
+        container-type: inline-size;
+    }
+
+    @container (max-width: 400px) {
+        .service-card {
+            padding: var(--space-md);
+        }
+    }
+}
